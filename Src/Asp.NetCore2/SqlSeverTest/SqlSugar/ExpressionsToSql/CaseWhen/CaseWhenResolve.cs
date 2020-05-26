@@ -23,7 +23,7 @@ namespace SqlSugar
             }
             else if (context.IsSingle)
             {
-                this.context.SingleTableNameSubqueryShortName = (context.Expression as LambdaExpression).Parameters.First().Name;
+                //this.context.SingleTableNameSubqueryShortName = (context.Expression as LambdaExpression).Parameters.First().Name;
             }
             while (currentExpression != null)
             {
