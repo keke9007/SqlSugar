@@ -142,7 +142,10 @@ namespace SqlSugar
         public virtual ISugarQueryable<T> AddParameters(List<SugarParameter> parameters)
         {
             if (parameters != null)
+            {
                 QueryBuilder.Parameters.AddRange(parameters);
+                QueryBuilder.LambdaExpressions.ParameterIndex = QueryBuilder.Parameters.Count() + 1;
+            }
             return this;
         }
         public virtual ISugarQueryable<T> AddParameters(SugarParameter parameter)
